@@ -1,0 +1,217 @@
+:root{
+    --background-color:#fff;
+    --background-light:#fff;
+    --shadow-color:rgba(0,0,0,0.2);
+    --primary-color:rgb(255,0,86) ;
+    --text-color:#0A0A0A ;
+    --text-light:#9b8e8e ;
+    --font-size:16px ;
+    --animation-speed:1 ;
+}
+@function getAnimationDuration($duration:number){
+    @return calc($duration*var(--animation-speed));
+}
+*{
+    margin:0 ; 
+    padding:0 ;
+    box-sizing: border-box;
+}
+body{
+    font-size:var(font-size) ;
+    font-family: 'Roboto', sans-serif;
+    background-color:var(--background-light) ;
+}
+a{
+    text-decoration: none;
+}
+//Chef-section
+.top-chief-section{
+    padding-inline: 60px;
+    padding-bottom: 100px;
+     .Chef-section{
+        display:grid ;
+        grid-template-columns: repeat(auto-fit ,minmax(400px ,1fr));
+        padding-inline:30px ;
+     }
+     .Chef-cards{
+        display:flex ;
+        height:120px ;
+        width:400px ;
+      
+        padding:10px ;
+        p{
+        line-height: 2px ;
+        padding-top: 8px;
+        margin-bottom: 0px;
+        padding-inline: 20px;
+        word-spacing: 4px;
+        b{
+           padding-inline:4px ;
+           color: var(--text-color);
+        }
+        }
+        img{
+           height:100% ;
+           width:120px ; 
+          
+        }
+        .chef-info{
+           width:120px ;
+           height:100% ;
+          
+           margin-inline: 0px ;
+       
+        .chef-name{
+         
+           font-weight: bolder;
+           font-size: 20px;
+           color: var(--text-color);
+        }
+       
+        .chef-contact{
+           padding-inline: 20px;
+             .logo{
+              padding-inline:6px ;
+             }
+             }
+     }
+     }
+  }
+  
+ @media screen and (max-width:452px) {
+   .Chef-cards{
+      box-shadow:0 3px 6px var(--shadow-color) ;
+   }
+   
+ }
+ //Navbar
+ .Navbar{
+    height:55px ;
+    box-shadow:0 3px 6px var(--shadow-color) ;
+    background-color: var(--background-color);
+    color:var(--text-color) ;
+    display:flex ; 
+    justify-content: space-between;
+    align-items: center;
+    padding-inline:10vw ;
+    .logo{
+    font-size:1.5em ;
+   
+
+    font-weight:bolder ;
+    color:var(--primary-color);
+    text-shadow:0 1px 3px var(--shadow-color) ;
+    span{
+        color:var(--text-color) ;
+    }
+}
+.Nav-links{
+  margin-left: 400px ;
+    a{
+     
+        margin-left:1em ;
+        color:var(--text-light) ;
+        letter-spacing:1px ; 
+        text-transform:upper-case ;
+         position:relative ;
+         &::before{
+            content: '' ;
+            display:block ; 
+            height:3px ; 
+            width:100% ; 
+            background-color:var(--primary-color) ;
+            position:absolute ;
+            bottom:-5px ; 
+            left:0px ; 
+            transform:scaleX(0);
+            transition: getAnimationDuration(0.5s);
+           
+         }
+         &:hover{
+            &::before{
+                transform:scaleX(1) ;
+            }
+         }
+         &.active{
+            color:var(primary-color);
+            font-weight: bold;
+         }
+    }
+}
+}
+#active{
+border:none ;
+background-color: transparent;
+display:none ;
+}
+
+
+@media  screen and (max-width:768px) {
+    .Navbar{
+        .Nav-links{
+            display:none ;
+        }
+        #active{
+            display:block ;
+        }
+    }
+}
+//FOOTER
+.Footer{
+    background-color: black;
+    padding-block: 30px;
+   display:grid ;
+   grid-template-columns:  repeat(auto-fit ,minmax(400px ,1fr));
+   grid-gap:1em ;
+    padding-left: 50px;
+   
+    .Footer-section{
+      
+        padding-inline: 30px ;
+     
+         p{
+            color: white;
+            padding-block: 0px;
+            opacity: 0.9;
+            margin-block: 0px;
+           
+         }
+    }
+}  
+//SIDEBAR
+.Sidebar{
+    z-index: 1;
+    display:none ;
+    width:180px ; 
+    height:100vh ;
+    top:0 ; 
+    left:0 ;
+    position:fixed ;
+    background-color:var(--background-color) ;
+    box-shadow: 0 0 0 1200px var(--shadow-color);
+     
+    a{
+        display :flex ;
+        padding:20px 10px;
+        margin:6px ;
+        
+        font-size: 1.5em;
+        color:var(--text-color) ;
+        svg{
+            padding-right:8px ;
+        }
+
+    }
+    a:hover{
+        border-left:  solid 4px var(--primary-color); 
+       transition: ease-in-out 0.2s;
+    }
+}
+
+@media  screen and (max-width:768px) {
+    .Sidebar{
+        display:block ;
+    }
+}
+
+//Hompage

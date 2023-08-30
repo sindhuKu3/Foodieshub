@@ -1,0 +1,236 @@
+@keyframes circle{
+    from{
+      transform:scale(0.1s) ;
+      opacity:0 ;
+    }
+    to{
+      transform:scale(1) ;
+      opacity:1 ;
+    }
+  
+   }
+   @keyframes square {
+    from{
+      transform: translate(900px ,0);
+    }
+    to{
+      transform:translate(0,0 ) ;
+    }
+   }
+  
+  h1{
+    font-weight: bolder;
+    font-size: 3em;
+    margin-bottom:15px ;
+    color:var(--text-color) ;
+  }
+  p{
+    color:var(--text-color) ;
+    margin-bottom: 15px;
+    padding-block:15px ;
+    letter-spacing:0.6px ; 
+   width:400px ;
+   line-height:25px;
+  
+  }
+  button{
+  width:10em; 
+  height:2.5em ;
+  font-size: 1em ;
+  font-weight:bold ;
+  padding:10px 4px 18px 4px  ;
+  
+  background-color: var(--primary-color);
+  color:var(--text-color) ;
+  letter-spacing: 2px ;
+  border-radius:5px ;
+  border: none;
+  box-shadow:(0 , 0 , 0 , 0.2)var(--primary-color);
+  }
+ 
+   
+   .Pri-container{
+    padding:6em ;
+    display:flex ;
+    align-items:center ; 
+    width:50% ; 
+    height:50% ;
+  
+    .col {
+      padding-inline:4em ;
+      padding-block: 11em;
+      padding-top: 15px ;
+    
+      h1{
+        width: 300px;
+      }
+    }
+    
+       .Gallery{
+          display:grid !important; 
+          grid-template-columns: repeat(3,1fr) !important;
+          gap:1vw!important;
+          padding-top: 0px ;
+          
+            img{
+              transform:scale(0.1) ;
+              animation-name: circle;
+              animation-duration: 0.7s;
+              animation-fill-mode: both;
+            animation-delay: 0.2s;
+          }
+       
+        }
+    }
+  .Sec-container{
+  display:flex ; 
+  align-items :center ;
+  padding:8em  ;
+  padding-top:0px;
+  margin-top: -200px;
+  .col{
+    
+    padding-left: 18px;
+    
+    p{
+      animation-name: square;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+      animation-delay: 5s;
+      padding-left: 2em;
+      padding-bottom: 25px;
+      width: 28em;
+      height:20px ;
+      box-shadow:0 3px 6px var(--shadow-color) ;
+      &:nth-child(2){
+        animation-delay: 0.2s;
+      }
+      &:nth-child(3){
+        animation-delay: 0.3s;
+      }
+      &:nth-child(4){
+        animation-delay: 0.4s;
+      }
+      &:nth-child(5){
+        animation-delay: 0.5s;
+      }
+      &:nth-child(6){
+        animation-delay: 0.6s;
+      }
+      &:nth-child(7){
+        animation-delay:0.7s ;
+      }
+    }
+  }
+  
+  }
+  
+  
+  @media  screen and (max-width: 1074px){
+    .Container{
+      .Pri-container{
+            .col{
+             padding-right:0px ;
+             p{
+              width: 300px;
+              line-height: 17px;
+             }
+            }
+            .Gallery{
+              padding-left: 0px;
+            }
+            
+           }
+   
+      .Sec-container{
+          p{
+            width: 18em;
+         }
+      }
+    }
+  }
+  
+  @media  screen and (max-width:844px){
+    .Pri-container{
+      display:block;
+      padding-left: 6.5em;
+     
+      .info{
+        padding-bottom: 24px;
+        display: inline-block;
+        text-align: center ;
+      }
+      .Gallery{
+        padding-left: 25px;
+      }
+    }
+    .Sec-container{
+      display:block ;
+      padding-left: 5em;
+      padding-bottom: 3em;
+      display: inline-block;
+      text-align: center ;
+      .col{
+        img{
+          padding-left: 20px;
+        }
+        h1{
+          width: 450px;
+          font-size: 2.8em;
+         
+        }
+        p{
+          width: 17em;
+          margin-left: 101px;
+          padding-right: 20px;
+        }
+        button{
+          margin-left: 20px;
+        }
+      }
+     
+    }
+  }
+
+  @media  screen and (max-width:452px){
+      .Pri-container{
+        display:block;
+        padding-left: 9px;
+        .info{
+          padding-bottom: 24px;
+          display: inline-block;
+          text-align: center ;
+        }
+        .Gallery{
+          padding-left: 25px;
+        }
+      }
+      .Sec-container{
+        display:block ;
+        padding-bottom: 3em;
+        display: inline-block;
+        text-align: center ;
+        padding-left: 28px;
+        .col{
+          img{
+            padding-left: 0px;
+            padding-right: 55px;
+            margin-right: 25px;
+          }
+          h1{
+            width: 316px;
+            font-size: 2.8em;
+           
+          }
+          p{
+            width: 17em;
+            margin-left: 24px;
+            padding-right: 20px;
+          }
+          button{
+            margin-left: -121px;
+          }
+        }
+       
+      }
+    }

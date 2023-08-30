@@ -1,0 +1,170 @@
+.ReciSearch{
+h2{
+   margin-top: 20px ;
+   margin-left: 10px;
+}
+
+.Previous-search{
+    display:flex;
+    padding-block: 20px;
+    font-size: small;
+   
+    
+    button{
+        width:200px ;
+        text-align: center;
+        margin-inline: 15px ;
+        height:40px;
+        padding-block: 0;
+         border-radius: 25px;
+         animation-name: square ;
+         animation-duration: 1s;
+         animation-fill-mode: both;
+         transition: ease-in-out;
+         &:nth-child(2){
+            animation-delay: 0.1s;
+         }
+         &:nth-child(3){
+            animation-delay: 0.2s;
+         }
+         &:nth-child(4){
+            animation-delay: 0.3s;
+         }
+         &:nth-child(5){
+            animation-delay: 0.4s;
+         }
+         &:nth-child(6){
+            animation-delay: 0.5s;
+         }
+         &:nth-child(7){
+            animation-delay: 0.6s;
+         }
+         &:nth-child(8){
+            animation-delay: 0.7s;
+         }
+         &:nth-child(9){
+            animation-delay: 0.8s;
+         }
+         &:nth-child(10){
+            animation-delay: 0.9s;
+         }
+    }
+}
+}
+.Searching{
+   width: 373px;
+   height: 41px;
+   background-color: var(--primary-color);
+   margin-left: 850px;
+   margin-block: 40px;
+   input{
+      height: 41px;
+      width: 340px;
+      padding-inline: 5px ;
+      outline: none;
+   }
+   button{
+      width: 33px;
+      height: 41px;
+   }
+ 
+}
+.Recipesection{
+   display:grid !important; 
+   grid-template-columns: repeat(auto-fit ,minmax(400px ,1fr));
+   gap:0.5vw!important;
+   margin-left: 15px;
+   .Recipecard{
+      padding-inline: 30px;
+      margin-inline: 30px;
+      width:350px;
+      height: 383px;
+      box-shadow:0 3px 6px var(--shadow-color) ;
+      border-radius: 5px;
+      margin-block: 28px;
+      transform:scale(0.1) ;
+      animation-name: circle;
+      animation-duration: 0.7s;
+      animation-fill-mode: both;
+      animation-delay: 0.2s;
+     &:hover{
+    border:1px solid black ;
+     }
+      img{
+         margin-left: -30px;
+         border-radius: 5px;
+         &:hover{
+            padding:2px ;
+         }
+      }
+      .Recipe-info{
+         margin-left: -15px;
+      .Recipename{
+           color: black;
+           font-style: italic;
+           font-size: 25px;
+           padding-left:5px ;
+           padding-bottom: 0px;
+           margin-bottom: 5px;
+      }
+      .Recipe-detail{
+         padding-top: 0px;
+         padding-bottom: 0px;
+         margin-bottom: 0px;
+         padding-right: 30px;
+         width: 361px;
+         font-weight: normal;
+         line-height: 15px;
+         color:rgb(210, 201, 201);
+      }
+      .Review{
+         padding-bottom: 10px;
+         margin-bottom: 0px;
+         padding-top: 0px;
+      }
+      button{
+         &:hover{
+            font-weight: 400;
+            width:9.8em;
+         }
+      }
+   }
+}
+ }
+ @media  screen and (max-width:1060px) {
+   .Previous-search{
+      button{
+         &:nth-child(10){
+            display:none ;
+         }
+         &:nth-child(8){
+            display:none ;
+         }
+         &:nth-child(9){
+            display:none ;
+         }
+      }
+   }
+   .Searching{
+      margin-left: 287px;
+   }
+ }
+ @media  screen and (max-width:670px) {
+   .Previous-search{
+      button{
+         &:nth-child(7){
+            display:none ;
+         }
+         &:nth-child(6){
+            display:none ;
+         }
+         &:nth-child(5){
+            display:none ;
+         }
+        
+      }
+   }
+   .Searching{
+      margin-left: 19px;
+   }
+ }

@@ -1,0 +1,47 @@
+.Setting{
+  
+.Preferred{
+    margin-left: 3em;
+   
+   h2{
+    margin-top: 3em;
+    margin-bottom: 1em;
+     font-weight: 1200px;
+     color:var(--text-color) ;
+   }
+    .Block{
+      border-left: 8px solid var(--primary-color);
+      background-color: var( --background-light);
+      width:600px ;
+      height:6em ;
+      margin-bottom: 10em;
+      border-radius: 5px;
+      box-shadow: 0 6px 5px var(--shadow-color);
+      display:flex;
+      .Option{
+        width: 61px;
+        height: 60px;
+        margin-left: 25px;
+        margin-top: 10px;
+       box-shadow:3px 3px 6px var(--shadow-color) ;
+       border-radius: 5px;
+       &:hover{
+        border-radius:20px ;
+       }
+      .Check{
+        svg{
+          margin-left: 20px;
+          margin-top: 13px;
+          color:rgb(122, 127, 122) ;
+        } 
+      }
+      }
+      .Dark{
+        background-color: black;
+      }
+    }
+}
+.Color{
+  margin-top: -45px;
+}
+}
